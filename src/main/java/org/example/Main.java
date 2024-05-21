@@ -1,13 +1,10 @@
 package org.example;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws IOException {
 
@@ -27,10 +24,20 @@ public class Main {
                 // reading file from given path
                 BufferedReader reader = new BufferedReader(new FileReader(userInput));
                 String nextLine;
+                String userJson=null;
                 while ((nextLine = reader.readLine()) != null){
                     System.out.println(nextLine);
+                    userJson+=nextLine;
                 }
                 reader.close();
+
+                JsonParser jsonParser=new JsonParser();
+                if(jsonParser.isValidJson(userJson)){
+
+                }else{
+                    System.out.println("This is invalid JSON as it's empty");
+                }
+
             }catch (Exception e){
                 System.out.println("Please provide valid path");
             }
