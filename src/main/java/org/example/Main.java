@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("::::   Welcome to JSON Parser   ::::");
         while(true){
-            System.out.println("Please git the path(absoulte path) of the your file");
+            System.out.println("Please give the path(absoulte path) of the your file");
             Scanner sc=new Scanner(System.in);
             String userInput=sc.nextLine();
 
@@ -24,7 +24,7 @@ public class Main {
                 // reading file from given path
                 BufferedReader reader = new BufferedReader(new FileReader(userInput));
                 String nextLine;
-                String userJson=null;
+                String userJson="";
                 while ((nextLine = reader.readLine()) != null){
                     System.out.println(nextLine);
                     userJson+=nextLine;
@@ -33,9 +33,9 @@ public class Main {
 
                 JsonParser jsonParser=new JsonParser();
                 if(jsonParser.isValidJson(userJson)){
-
+                    System.out.println("This is a valid json");
                 }else{
-                    System.out.println("This is invalid JSON as it's empty");
+                    System.out.println("This is invalid JSON");
                 }
 
             }catch (Exception e){
