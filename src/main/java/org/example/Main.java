@@ -32,8 +32,10 @@ public class Main {
                 reader.close();
 
                 JsonParser jsonParser=new JsonParser();
-                if(jsonParser.isValidJson(userJson)){
-                    System.out.println("This is a valid json");
+                StringBuilder structuredLog=new StringBuilder();
+                if(jsonParser.isValidJson(userJson, structuredLog)){
+                    System.out.println("This is a valid json  :: "+structuredLog);
+
                 }else{
                     System.out.println("This is invalid JSON");
                 }
