@@ -8,7 +8,7 @@ This tool is build as part of <a href="https://codingchallenges.fyi/challenges/c
 This tool is in java , so please ensure that you have latest java version installed in your device 
 <br><br>
 
-step 1: git clone https://github.com/priyapatelsp/CH1_buildWcTool.git
+step 1: git clone https://github.com/priyapatelsp/JsonParser.git
 
 step 2: click and run the main.java file to start the project
 
